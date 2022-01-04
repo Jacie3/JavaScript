@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Carousel</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Let us huck</h1>
+        <div class="carousel">
+            <button class="carousel__button carousel__button--next"><span class="material-icons">arrow_forward</span></button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide carousel__slide--current">
+                        <img class="carousel__image" src="../images/bike-image-1.png" alt="mountain biker going off jump with no hands on handlebars.">
+                        <div class="carousel__caption">
+                            <h5>Kash Huxley, Trek</h5>
+                            <h5>Whitefish, Montana</h5>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="../images/bike-image-2.png" alt="mountain biker doing wheely on rock face.">
+                        <div class="carousel__caption">
+                            <h5>Luka Jones, Santa Cruz</h5>
+                            <h5>St. Geroge, Utah</h5>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="../images/bike-image-3.png" alt="mountain biker cruising downhill off of burm.">
+                        <div class="carousel__caption">
+                            <h5>Johnny Ledger, Yeti </h5>
+                            <h5>Florence, Oregon</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--prev is-hidden"><span class="material-icons">arrow_back</span></button>
+            <div class="carousel__nav">
+                <button class="carousel__indicator carousel__indicator--current"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/main.js"></script>
+</html>
