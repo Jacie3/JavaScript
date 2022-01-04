@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="lists">
+            <div class="lists__header">
+                <div class="lists__inner-header">
+                    <h2 class="lists__title">M<span>y Lists</span></h2>
+                    <form action="" data-new-list-form>
+                        <input 
+                            data-new-list-input
+                            type="text"
+                            class="list__item--new"
+                            placeholder="E.g. Work"
+                        />
+                    </form>
+                </div>
+                <button class="add-list-btn"><span>+</span> Add List</button>
+            </div>
+            <div class="lists__all">
+                <ul class="list" data-lists>
+                    <!-- <li class="list__item list__item--active">Grocery</li>
+                    <li class="list__item">Work</li>
+                    <li class="list__item">Trip</li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="todo" data-list-display-container>
+            <h1 class="todo__title" data-list-title></h1>
+            <div class="todo__header">
+                <div class="todo__inner-header-input">
+                    <h5 class="todo__subtitle">A<span class="smaller-font">dd a task</span></h5>
+                    <form class="todo__form" data-new-task-form>
+                        <input 
+                            type="text" 
+                            id="item"
+                            name="item" 
+                            value="", 
+                            placeholder="E.g. Buy Groceries" 
+                            class="todo_input"
+                            data-new-task-input
+                        />
+                    </form>
+                </div>
+                <div class="todo__inner-header-add-task">
+                    <button class="add-task-btn" type="button"><span class="larger-font">+</span> Add Task</button>
+                    <p class="todo__tasks-remaining" data-list-count></p>
+                </div>
+            </div>
+            <div class="todo__body">
+                <div class="todo__tasks" data-tasks></div>
+                <div class="todo__clear">
+                    <button class="todo__clear-button clear-task" data-clear-complete-tasks-button>Clear Completed Tasks</button>
+                    <button class="todo__clear-button delete-list" data-delete-list-button>Delete List</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template id="task-template">
+        <div class="todo__task">
+            <input type="checkbox"/>
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+</body>
+<script src="../js/main.js"></script>
+</html>

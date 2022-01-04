@@ -1,0 +1,187 @@
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  border: 1px solid red;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .container .lists {
+    text-align: left;
+    margin: 1.5em auto;
+    padding: 2em;
+    background: #e9f3f6;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    border-radius: 3px;
+    box-shadow: 2px 5px 10px #c7c7c7;
+    width: 80%; }
+    .container .lists .lists__header {
+      display: flex;
+      flex-direction: row;
+      border: none;
+      background: #004a8b;
+      color: lightgray;
+      border-radius: 5px;
+      justify-content: space-between; }
+      .container .lists .lists__header .add-list-btn {
+        margin: 1.2em;
+        font-family: Helvetica, sans-serif;
+        font-size: 0.8rem;
+        padding: 0 1.2rem;
+        border: none;
+        border-radius: 3px;
+        background: #09d2ac;
+        white-space: nowrap;
+        cursor: pointer; }
+        .container .lists .lists__header .add-list-btn span {
+          font-size: 1.2rem; }
+      .container .lists .lists__header .lists__inner-header {
+        padding: 1em; }
+        .container .lists .lists__header .lists__inner-header .lists__title {
+          text-transform: uppercase;
+          font-size: 1rem; }
+          .container .lists .lists__header .lists__inner-header .lists__title span {
+            font-size: 0.7rem; }
+        .container .lists .lists__header .lists__inner-header form input {
+          background: none;
+          border: 0;
+          color: #e9f3f6;
+          font-size: 1.3rem; }
+    .container .lists .lists__all {
+      cursor: pointer; }
+      .container .lists .lists__all .list {
+        padding: 0 1.5em;
+        text-align: left;
+        list-style: circle; }
+      .container .lists .lists__all .list__item {
+        margin: 0.5em; }
+      .container .lists .lists__all .list__item--active {
+        color: #09d2ac;
+        font-size: 1.2rem; }
+  .container .todo {
+    text-align: left;
+    margin: 1.5em auto;
+    padding: 2em;
+    background: #e9f3f6;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    border-radius: 3px;
+    width: 80%;
+    box-shadow: 2px 5px 10px #c7c7c7; }
+    .container .todo .todo__title {
+      color: #004a8b;
+      margin: 0 0 0.3em 0em; }
+    .container .todo .todo__header {
+      display: flex;
+      flex-direction: row;
+      border: none;
+      background: #004a8b;
+      color: lightgray;
+      border-radius: 5px;
+      justify-content: space-between; }
+      .container .todo .todo__header .todo__inner-header-input {
+        padding: 1em; }
+        .container .todo .todo__header .todo__inner-header-input .todo__subtitle {
+          font-family: Helvetica, sans-serif;
+          font-size: 1em;
+          text-transform: uppercase; }
+          .container .todo .todo__header .todo__inner-header-input .todo__subtitle .smaller-font {
+            font-size: 0.7em; }
+        .container .todo .todo__header .todo__inner-header-input .todo__form input {
+          background: transparent;
+          color: lightgray;
+          border: none;
+          font-size: 1.3rem; }
+      .container .todo .todo__header .todo__inner-header-add-task {
+        display: flex; }
+        .container .todo .todo__header .todo__inner-header-add-task .add-task-btn {
+          margin: 1.2em;
+          font-family: Helvetica, sans-serif;
+          font-size: 0.8rem;
+          padding: 0em 1.2em;
+          border: none;
+          border-radius: 3px;
+          background: #09d2ac;
+          white-space: nowrap;
+          cursor: pointer; }
+          .container .todo .todo__header .todo__inner-header-add-task .add-task-btn .larger-font {
+            font-size: 1.2rem; }
+        .container .todo .todo__header .todo__inner-header-add-task .todo__tasks-remaining {
+          font-family: Helvetica, sans-serif;
+          font-size: 0.8rem;
+          white-space: nowrap;
+          margin: auto 1em auto 0;
+          padding: 1em;
+          text-align: center; }
+    .container .todo .todo__body {
+      padding: 1em; }
+      .container .todo .todo__body .todo__tasks {
+        margin-bottom: 1.5em;
+        padding: 0;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.2em;
+        position: relative; }
+        .container .todo .todo__body .todo__tasks .todo__task {
+          margin: 1em;
+          position: relative;
+          display: table; }
+          .container .todo .todo__body .todo__tasks .todo__task [type="checkbox"] {
+            opacity: 0;
+            position: absolute; }
+          .container .todo .todo__body .todo__tasks .todo__task label {
+            display: flex;
+            cursor: pointer; }
+            .container .todo .todo__body .todo__tasks .todo__task label .custom-checkbox {
+              display: inline-block;
+              width: 1em;
+              height: 1em;
+              background: transparent;
+              border: 2px solid black;
+              border-radius: 50%;
+              margin-right: 0.5em;
+              transform: scale(1);
+              transition: transform 300ms ease-in-out; }
+        .container .todo .todo__body .todo__tasks .todo__task:hover .custom-checkbox[type="checkbox"]:focus + label .custom-checkbox {
+          transform: scale(1.2);
+          border-color: #004a8b; }
+        .container .todo .todo__body .todo__tasks [type="checkbox"]:checked + label .custom-checkbox {
+          background: #004a8b;
+          border-color: #004a8b;
+          box-shadow: inset 0 0 0 2px #fff; }
+        .container .todo .todo__body .todo__tasks [type="checkbox"]:checked + label {
+          opacity: 0.5; }
+        .container .todo .todo__body .todo__tasks .todo__task label::after {
+          content: "";
+          height: 2px;
+          background: black;
+          position: absolute;
+          right: 0;
+          left: 1.5em;
+          top: calc(50% - 2px);
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 150ms ease-in; }
+        .container .todo .todo__body .todo__tasks [type="checkbox"]:checked + label::after {
+          transform: scaleX(1);
+          transform-origin: left; }
+    .container .todo .todo__clear {
+      margin-left: 1em; }
+      .container .todo .todo__clear .todo__clear-button {
+        background: none;
+        border: none;
+        border-bottom: 1px solid darkgray;
+        margin-right: 1em;
+        font-family: Helvetica, sans-serif;
+        font-size: 0.8em;
+        cursor: pointer; }
+        .container .todo .todo__clear .todo__clear-button:hover {
+          color: #004a8b;
+          border-color: #004a8b; }
+
+/*# sourceMappingURL=main.css.map */
